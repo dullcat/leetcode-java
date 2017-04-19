@@ -1,27 +1,31 @@
 package longest_substring_without_repeating_characters;
 
-import java.util.Arrays;
+import java.util.HashSet;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    // Insert your Solution class here
     public class Solution {
         public int lengthOfLongestSubstring(String s) {
-            int[] prevPos = new int[Character.MAX_VALUE + 1];
-            Arrays.fill(prevPos, -1);
-            int substringBegin = 0;
-            int maxSubstringLen = 0;
-            for (int i = 0; i < s.length(); i++) {
-                substringBegin = Math.max(substringBegin,
-                        prevPos[s.charAt(i)] + 1);
-                prevPos[s.charAt(i)] = i;
-                maxSubstringLen = Math.max(maxSubstringLen, i - substringBegin
-                        + 1);
+            if (s == null || s.length() == 0) return 0;
+            int left = 0, right = 0, maxLen = 0;
+            HashSet<Character> set = new HashSet<Character>();
+            while (right < s.length()) {
+                if (!set.contains(s.charAt(right))) {
+                    set.add(s.charAt(right));
+                    right++;
+                    maxLen = Math.max(maxLen, right-left);
+                }
+                else {
+                    set.remove(s.charAt(left));
+                    left++;
+                }
             }
-            return maxSubstringLen;
+            return maxLen;
         }
     }
-
     public static class UnitTest {
-
+        
     }
 }
+
