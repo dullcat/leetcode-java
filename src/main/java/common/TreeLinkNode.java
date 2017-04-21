@@ -1,4 +1,4 @@
-package others.common;
+package common;
 
 public class TreeLinkNode {
     public int val;

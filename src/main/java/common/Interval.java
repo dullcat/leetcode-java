@@ -1,4 +1,4 @@
-package others.common;
+package common;
 
 public final class Interval {
     public int start;

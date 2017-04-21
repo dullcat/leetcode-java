@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import others.common.Interval;
+import common.Interval;
 
 public class MergeIntervals {
 

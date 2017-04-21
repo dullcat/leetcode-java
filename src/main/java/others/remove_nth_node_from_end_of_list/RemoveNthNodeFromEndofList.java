@@ -1,6 +1,6 @@
 package others.remove_nth_node_from_end_of_list;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class RemoveNthNodeFromEndofList {
 

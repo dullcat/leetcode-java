@@ -1,6 +1,6 @@
 package others.flatten_binary_tree_to_linked_list;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class FlattenBinaryTreetoLinkedList {
 

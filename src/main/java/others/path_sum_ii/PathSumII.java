@@ -2,7 +2,7 @@ package others.path_sum_ii;
 
 import java.util.ArrayList;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class PathSumII {
 

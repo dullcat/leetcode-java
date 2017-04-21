@@ -1,6 +1,6 @@
 package others.insert_interval;
 
-import others.common.Interval;
+import common.Interval;
 import org.junit.Test;
 
 import java.util.ArrayList;

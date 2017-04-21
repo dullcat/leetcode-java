@@ -2,7 +2,7 @@ package others.unique_binary_search_trees_ii;
 
 import java.util.ArrayList;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class UniqueBinarySearchTreesII {
 

@@ -1,6 +1,6 @@
 package others.reverse_linked_list_ii;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class ReverseLinkedListII {
 

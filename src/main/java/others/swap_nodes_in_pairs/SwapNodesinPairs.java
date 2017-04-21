@@ -1,6 +1,6 @@
 package others.swap_nodes_in_pairs;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class SwapNodesinPairs {
 

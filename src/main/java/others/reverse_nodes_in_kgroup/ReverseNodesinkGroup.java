@@ -1,6 +1,6 @@
 package others.reverse_nodes_in_kgroup;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class ReverseNodesinkGroup {
 

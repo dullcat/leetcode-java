@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class MergekSortedLists {
 

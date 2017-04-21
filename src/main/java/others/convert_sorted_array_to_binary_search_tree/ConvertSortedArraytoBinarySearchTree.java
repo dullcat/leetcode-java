@@ -1,6 +1,6 @@
 package others.convert_sorted_array_to_binary_search_tree;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class ConvertSortedArraytoBinarySearchTree {
 

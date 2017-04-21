@@ -1,6 +1,6 @@
 package others.binary_tree_right_side_view;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

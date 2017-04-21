@@ -2,7 +2,7 @@ package others.binary_search_tree_iterator;
 
 import java.util.ArrayDeque;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class BinarySearchTreeIterator {
 

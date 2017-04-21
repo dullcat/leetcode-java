@@ -1,6 +1,6 @@
 package others.remove_duplicates_from_sorted_list_ii;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class RemoveDuplicatesfromSortedListII {
 

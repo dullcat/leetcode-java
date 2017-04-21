@@ -1,6 +1,6 @@
 package others.linked_list_cycle_ii;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class LinkedListCycleII {
 

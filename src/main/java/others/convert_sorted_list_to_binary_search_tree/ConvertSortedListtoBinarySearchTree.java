@@ -1,7 +1,7 @@
 package others.convert_sorted_list_to_binary_search_tree;
 
-import others.common.ListNode;
-import others.common.TreeNode;
+import common.ListNode;
+import common.TreeNode;
 
 public class ConvertSortedListtoBinarySearchTree {
 

@@ -1,4 +1,4 @@
-package others.common;
+package common;
 
 class Point {
     public int x;

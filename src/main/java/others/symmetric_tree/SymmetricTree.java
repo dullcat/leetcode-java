@@ -2,7 +2,7 @@ package others.symmetric_tree;
 
 import java.util.LinkedList;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class SymmetricTree {
 

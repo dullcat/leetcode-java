@@ -1,6 +1,6 @@
 package others.sort_list;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class SortList {
 

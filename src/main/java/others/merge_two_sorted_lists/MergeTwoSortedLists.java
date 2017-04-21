@@ -1,6 +1,6 @@
 package others.merge_two_sorted_lists;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class MergeTwoSortedLists {
 

@@ -1,6 +1,6 @@
 package others.intersection_of_two_linked_lists;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class IntersectionofTwoLinkedLists {
 

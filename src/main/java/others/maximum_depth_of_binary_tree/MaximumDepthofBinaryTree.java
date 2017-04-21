@@ -1,6 +1,6 @@
 package others.maximum_depth_of_binary_tree;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class MaximumDepthofBinaryTree {
 

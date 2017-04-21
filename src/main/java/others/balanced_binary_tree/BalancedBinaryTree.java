@@ -1,6 +1,6 @@
 package others.balanced_binary_tree;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class BalancedBinaryTree {
 

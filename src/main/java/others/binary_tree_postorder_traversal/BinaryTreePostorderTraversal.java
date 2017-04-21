@@ -3,7 +3,7 @@ package others.binary_tree_postorder_traversal;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class BinaryTreePostorderTraversal {
 

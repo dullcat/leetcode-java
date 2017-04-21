@@ -1,6 +1,6 @@
 package others.populating_next_right_pointers_in_each_node;
 
-import others.common.TreeLinkNode;
+import common.TreeLinkNode;
 
 public class PopulatingNextRightPointersinEachNode {
 

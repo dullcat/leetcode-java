@@ -1,6 +1,6 @@
 package others.same_tree;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class SameTree {
 

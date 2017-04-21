@@ -2,7 +2,7 @@ package others.path_sum;
 
 import org.junit.Test;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class PathSum {
 

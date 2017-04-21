@@ -3,7 +3,7 @@ package others.construct_binary_tree_from_preorder_and_inorder_traversal;
 import java.util.HashMap;
 import java.util.Map;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class ConstructBinaryTreefromPreorderandInorderTraversal {
 

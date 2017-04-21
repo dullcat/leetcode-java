@@ -2,7 +2,7 @@ package others.binary_tree_zigzag_level_order_traversal;
 
 import java.util.ArrayList;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class BinaryTreeZigzagLevelOrderTraversal {
 

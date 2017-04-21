@@ -1,6 +1,6 @@
 package others.insertion_sort_list;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class InsertionSortList {
 

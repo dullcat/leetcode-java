@@ -2,7 +2,7 @@ package others.clone_graph;
 
 import java.util.HashMap;
 
-import others.common.UndirectedGraphNode;
+import common.UndirectedGraphNode;
 
 public class CloneGraph {
 

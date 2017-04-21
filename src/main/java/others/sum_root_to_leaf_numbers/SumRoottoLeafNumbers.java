@@ -1,6 +1,6 @@
 package others.sum_root_to_leaf_numbers;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class SumRoottoLeafNumbers {
 

@@ -1,6 +1,6 @@
 package others.recover_binary_search_tree;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class RecoverBinarySearchTree {
 

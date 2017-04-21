@@ -1,6 +1,6 @@
 package others.binary_tree_maximum_path_sum;
 
-import others.common.TreeNode;
+import common.TreeNode;
 
 public class BinaryTreeMaximumPathSum {
 

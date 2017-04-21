@@ -1,6 +1,6 @@
 package others.copy_list_with_random_pointer;
 
-import others.common.RandomListNode;
+import common.RandomListNode;
 
 public class CopyListwithRandomPointer {
 

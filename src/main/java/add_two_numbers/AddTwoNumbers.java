@@ -1,6 +1,6 @@
 package add_two_numbers;
 
-import others.common.ListNode;
+import common.ListNode;
 
 public class AddTwoNumbers {
 
