@@ -74,7 +74,11 @@ public class ${className} {
     // Insert your Solution class here
 
     public static class UnitTest {
-        
+        //@Test
+        public void test${className}() {
+            Solution s = new ${className}().new Solution();
+            //assertEquals(2.5, 2.4999999, 1E-6);
+        }
     }
 }
 """)
