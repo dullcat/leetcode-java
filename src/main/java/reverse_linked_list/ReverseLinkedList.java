@@ -31,6 +31,22 @@ public class ReverseLinkedList {
 
             return newHead;
         }
+        public ListNode reverseList1(ListNode head) {
+            if (head == null) return null;
+            ListNode pre = new ListNode(0);
+            pre.next = head;
+            ListNode cur = pre.next;
+            ListNode next = cur.next;
+
+            while (next != null) {
+                cur.next = next.next;
+                next.next = pre.next;
+                pre.next = next;
+                next = cur.next;
+            }
+
+            return pre.next;
+        }
     }
     public static class UnitTest {
         //@Test
