@@ -50,6 +50,21 @@ public class FlattenBinaryTreetoLinkedList {
             }
             return curTail;
         }
+
+        // Non-recursive solution from others. https://discuss.leetcode.com/topic/3995/share-my-simple-non-recursive-solution-o-1-space-complexity/12
+        public void flatten1(TreeNode root) {
+            TreeNode cur = root;
+            while (cur != null) {
+                if (cur.left != null) {
+                    TreeNode last = cur.left;
+                    while (last.right != null) last = last.right;
+                    last.right = cur.right;
+                    cur.right = cur.left;
+                    cur.left = null;
+                }
+                cur = cur.right;
+            }
+        }
     }
     public static class UnitTest {
         @Test
