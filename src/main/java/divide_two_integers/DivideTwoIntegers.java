@@ -9,28 +9,33 @@ public class DivideTwoIntegers {
     // Insert your Solution class here
     public class Solution {
         public int divide(int dividend, int divisor) {
-            if (divisor == 0) return Integer.MAX_VALUE;
+            if (divisor == 0 || dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
             if (dividend == 0) return 0;
-            boolean isPositive = (divisor > 0 && dividend > 0) || (divisor < 0 && dividend < 0);
-            long longDivisor = divisor, longDividend = dividend;
-            if (divisor < 0) longDivisor = - divisor;
-            if (dividend < 0) longDividend = -dividend;
-            int res = 0;
-            int multi = 1;
+            if (divisor == 1) return dividend;
+            long ldividend = (long) dividend;
+            long ldivisor = (long) divisor;
+
+            boolean isPositive = (ldivisor > 0 && ldividend > 0) || (ldivisor < 0 && ldividend < 0);
+            if (divisor < 0) ldivisor = - ldivisor;
+            if (dividend < 0) ldividend = -ldividend;
+            long res = 0;
+            long multi = 1;
             while (multi >= 1) {
-                if (longDividend >= longDivisor) {
-                    longDividend -= longDivisor;
+                if (ldivisor == 0) break;
+                if (ldividend >= ldivisor) {
+                    ldividend -= ldivisor;
                     res += multi;
-                    multi = multi << 1;
-                    longDivisor = longDivisor << 1;
+                    if (ldividend/2 > ldivisor) {
+                        multi = multi << 1;
+                        ldivisor = ldivisor << 1;
+                    }
                 }
                 else {
                     multi = multi >> 1;
-                    longDivisor = longDivisor >> 1;
-                    if (longDivisor == 0) break;
+                    ldivisor = ldivisor >> 1;
                 }
             }
-            return isPositive? res : -res;
+            return (int)(isPositive? res : -res);
         }
     }
     public static class UnitTest {
@@ -39,7 +44,8 @@ public class DivideTwoIntegers {
             Solution s = new DivideTwoIntegers().new Solution();
             assertEquals(-1, s.divide(-1, 1));
             assertEquals(-2/3, s.divide(-2, 3));
-            assertEquals(2147483647, s.divide(-2147483648, -1));
+            assertEquals(-1073741824, s.divide(-2147483648, 2));
+            assertEquals(1073741823, s.divide(2147483647, 2));
         }
     }
 }
