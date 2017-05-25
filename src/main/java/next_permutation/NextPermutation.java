@@ -10,14 +10,39 @@ public class NextPermutation {
     public class Solution {
         public void nextPermutation(int[] nums) {
             if (nums.length <= 1) return;
-            int i = 0;
-            for(; i<nums.length-1; i++) {
-                if (nums[i] > nums[i+1]) {
+            int i = nums.length-1;
+            for(; i>0; i--) {
+                if (nums[i-1] < nums[i]) {
                     break;
                 }
             }
+            if (i>0) {
+                int j = nums.length - 1;
+                for (; j > i-1; j--) {
+                    if (nums[j] > nums[i-1]) {
+                        swap(nums, i-1, j);
+                        break;
+                    }
+                }
+            }
+
+            reverse(nums, i, nums.length-1);
+        }
+        void reverse(int[] nums, int i, int j) {
+            while (i < j) {
+                swap(nums, i, j);
+                i++;
+                j--;
+            }
+        }
+
+        void swap(int[] nums, int i, int j) {
+            int t = nums[i];
+            nums[i] = nums[j];
+            nums[j] = t;
         }
     }
+
     public static class UnitTest {
         @Test
         public void testNextPermutation() {
