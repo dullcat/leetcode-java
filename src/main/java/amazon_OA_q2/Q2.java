@@ -1,13 +1,10 @@
-package q2;
+package amazon_OA_q2;
 
-import java.util.*;
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.Test;
 
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
 
 public class Q2 {
 

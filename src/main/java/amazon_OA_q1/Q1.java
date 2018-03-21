@@ -1,8 +1,8 @@
-package q1;
+package amazon_OA_q1;
 
-import java.util.*;
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class Q1 {
     // Amazon Online Accessment Q1
