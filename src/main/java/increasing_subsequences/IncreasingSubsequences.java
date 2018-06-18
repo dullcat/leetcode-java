@@ -20,11 +20,16 @@ public class IncreasingSubsequences {
                 res.add(new ArrayList(curList));
             }
 
-            for (int i=cur; i<nums.length;) {
-                curList.add(nums[i]);
-                sub(nums, cur+1, curList, res);
-                curList.remove(curList.size()-1);
-                while (i+1<nums.length && nums[i]==nums[i+1]) i++;
+            HashMap<Integer, Integer> map = new HashMap();
+            for (int i=cur; i<nums.length; i++) {
+                if (map.containsKey(nums[i]) ) continue;
+                if (curList.size() == 0 || curList.get(curList.size()-1) <= nums[i]) {
+                    if (!map.containsKey(nums[i])) map.put(nums[i], curList.size());
+                    curList.add(nums[i]);
+                    sub(nums, i + 1, curList, res);
+                    curList.remove(curList.size() - 1);
+
+                }
             }
         }
     }

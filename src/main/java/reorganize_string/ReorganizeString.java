@@ -21,6 +21,7 @@ public class ReorganizeString {
                     maxC = i;
                 }
             }
+            return "";
         }
     }
     public static class UnitTest {

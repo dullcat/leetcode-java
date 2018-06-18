@@ -1,11 +1,12 @@
 package two_sum;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
 
     // Insert your Solution class here
-    public class Solution {
+    public class Solution1 {
         public int[] twoSum(int[] nums, int target) {
             if (nums == null || nums.length <= 1) return null;
 
@@ -25,6 +26,17 @@ public class TwoSum {
         }
     }
 
+    public class Solution {
+        public int[] twoSum(int[] nums, int target) {
+            if (nums == null || nums.length <= 1) return null;
+
+            int[] res = new int[2];
+
+            Arrays.sort(nums);
+
+            return res;
+        }
+    }
     public static class UnitTest {
         
     }

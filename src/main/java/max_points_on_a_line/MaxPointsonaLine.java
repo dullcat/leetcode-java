@@ -71,7 +71,8 @@ public class MaxPointsonaLine {
             ps[1] = new Point(94911151,94911150);
             ps[2] = new Point(94911152,94911151);
             int a = s.maxPoints(ps);
-            assertTrue(a==2);
+            assertEquals(a, 2);
+            PriorityQueue<Integer> pq = new PriorityQueue<>((b,c) -> b-c);
         }
     }
 }

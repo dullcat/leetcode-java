@@ -31,6 +31,8 @@ public class WordBreak {
         @Test
         public void testWordBreak() {
             Solution s = new WordBreak().new Solution();
+            StringBuilder sb = new StringBuilder();
+
         }
     }
 }
