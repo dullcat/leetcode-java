@@ -1,10 +1,12 @@
 .classpath
 .project
 .settings
+classes
 target
 build
 bin
 .gradle
+*.class
 
 # IntelliJ specific files/directories
 out

@@ -1,7 +1,6 @@
 package others.combinations;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Combinations {
 
@@ -13,6 +12,7 @@ public class Combinations {
                 ans.add(new ArrayList<Integer>(queue));
                 return;
             }
+            Queue<int[]> q = new LinkedList<>();
 
             for (int i = start; i <= end - k + 1; i++) {
                 queue.offerLast(i);

@@ -52,8 +52,53 @@ public class TheMazeII {
 
     // Insert your Solution class here
     class Solution {
+        class P {
+            int row;
+            int col;
+            int d;
+            public P(int row, int col, int d) {
+                this.row = row;
+                this.col = col;
+                this.d = d;
+            }
+        }
+        int[][] dirs = {{-1,0}, {1,0}, {0,-1}, {0,1}};
         public int shortestDistance(int[][] maze, int[] start, int[] destination) {
-StringBuilder a = new StringBuilder();
+            int m = maze.length;
+            int n = maze[0].length;
+            boolean[][] visited = new boolean[m][n];
+            Queue<P> q = new LinkedList<>();
+            q.offer(new P(start[0], start[1], 0));
+            int step = Integer.MAX_VALUE;
+
+            while (!q.isEmpty()) {
+                P p = q.poll();
+                visited[p.row][p.col] = true;
+                if (p.row == destination[0] && p.col == destination[1]) {
+                    step = Math.min(step, p.d);
+                    continue;
+                }
+
+                for (int i=0; i<4; i++) {
+                    int newR = p.row + dirs[i][0];
+                    int newC = p.col + dirs[i][1];
+                    int d = p.d + 1;
+                    if (newR>=0 && newR<m && newC>=0 && newC<n && maze[newR][newC] == 0 && !visited[newR][newC]) {
+                        int nextR = newR + dirs[i][0];
+                        int nextC = newC + dirs[i][1];
+                        while (nextR>=0 && nextR<m && nextC>=0 && nextC<n && maze[nextR][nextC] == 0) {
+                            newR = nextR;
+                            newC = nextC;
+                            d++;
+                            nextR = newR + dirs[i][0];
+                            nextC = newC + dirs[i][1];
+                        }
+                        if (!visited[newR][newC])
+                            q.offer(new P(newR, newC, d));
+                    }
+                }
+            }
+            return -1;
         }
     }
     public static class UnitTest {
