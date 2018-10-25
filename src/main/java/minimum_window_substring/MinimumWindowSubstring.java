@@ -18,6 +18,49 @@ public class MinimumWindowSubstring {
 
     // Insert your Solution class here
     class Solution {
+        public String minWindow(String s, String t) {
+            if (s == null || s.length() == 0 || t == null || t.length() == 0) return "";
+
+            Map<Character, Integer> map = new HashMap<>();
+            for (char c: t.toCharArray()) {
+                if (!map.containsKey(c)) {
+                    map.put(c, 1);
+                }
+                else
+                    map.put(c, map.get(c) + 1);
+            }
+
+            int minLeft = 0;
+            int minLen = Integer.MAX_VALUE;
+            int count = t.length();
+            int base = 0;
+            for (int i=0; i<s.length(); i++) {
+                char c = s.charAt(i);
+                if (map.containsKey(c)) {
+                    map.put(c, map.get(c)-1);
+                    if (map.get(c) >= 0)
+                        count--;
+                }
+                while (count == 0) {
+                    if (i-base<minLen) {
+                        minLeft = base;
+                        minLen = i-base+1;
+                    }
+                    char b = s.charAt(base);
+                    if (map.containsKey(b)) {
+                        map.put(b, map.get(b)+1);
+                        if (map.get(b) > 0)
+                            count++;
+                    }
+                    base++;
+                }
+            }
+
+            return minLen==Integer.MAX_VALUE? "" : s.substring(minLeft, minLeft+minLen);
+        }
+    }
+
+    class Solution2 {
 
         private boolean cover(Map<Character, Integer> m1, Map<Character, Integer> m2) {
             for (char c: m2.keySet()) {
